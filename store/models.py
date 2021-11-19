@@ -30,7 +30,7 @@ class Product(models.Model):
     author = models.CharField(max_length=255, default='admin')
     # textfield is much larger than Charfield
     description = models.TextField(blank=True)
-    # not necessary to put image here, because we can use another table like album table
+    # not necessary to put image here, because we can use another table like album table in media folder
     image = models.ImageField(upload_to='images/')
     # urls last unique place that we can utilize it
     slug = models.SlugField(max_length=255)

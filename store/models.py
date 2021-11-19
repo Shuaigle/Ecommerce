@@ -20,7 +20,7 @@ class Category(models.Model):
         return self.name
 
 class Product(models.Model):
-    # reference to Category table, must have category or will delete cascade
+    # reference to Category table, must have category or will delete cascade, important
     category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)
     # who actually made this product, connect to User table
     # when delete User table units, will also delete Pruduct table
